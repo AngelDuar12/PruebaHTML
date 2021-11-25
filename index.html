@@ -3,55 +3,73 @@
     <head>   
         <title> LiteR </title>  
     </head>
-<style>
-    h1
-    {
-        text-align: center;
-        background-color:green;
-        font-family: 'Times New Roman', Times, serif;
-        color:white; 
-    }
+<style type="text/css">
 
-    h2
-    {
-        text-align: center;
-        color: white;
-        background-color: green;
-    }
+*{
+        margin: 0px;
+        padding: 0px;
+    }		
 
-    table
-    {
-        align-items:center;   
-    }
-</style>
-<body> 
+   #header{
+       margin: auto;
+       width: 400px;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
-    <div>
-        <table> 
-            <tr>
-                <td> Algo </td>
-                <td> Algo</td>
-            </tr>
-            
-            <tr>
-                <td> Algo</td>
-                <td> Algo</td>
-            </tr>
-            
-            <tr>
-                <td> Algo</td>
-                <td> Algo</td>
-            </tr>
+   }
 
-            <tr>
-                <td> Algo</td>
-                <td> Algo</td>
-            </tr>
-        </table>
-        <img src="LogoLiteR.png" alt="LogoLiteR" width="150" height="175">
-        <p> Estoy practicando HTML <strong>básico</strong> </p>
-    </div>
+   ul,ol{
+    list-style: none;
 
+    }
+
+    .nav li a{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        padding: 9px 15px;
+        display: block;
+    }
+
+    .nav > li{
+        float:left;
+    }
+    .nav li a:hover{
+        background-color: #434343;
+    }
+
+    .nav li ul{
+        display: none;
+        position: absolute;
+        min-width: 10px;
+    }
+
+    .nav li:hover>ul{
+        display: block;
+    }
+
+</style>
+
+<body> 
+
+    <header>
+        <figure>
+            <img src="LogoLiteR.png" alt="LogoLiteR" width="160px" height="90px" align="center">
+        </figure>
+
+        <div id= header> 
+            <ul class="nav">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Libros</a>
+                <ul>
+                    <li><a href="">Submenu 1</a></li>
+                    <li><a href="">Submenu 2</a></li>
+                    <li><a href="">Submenu 3</a></li>
+                </ul>
+                </li>
+                <li><a href="">Contactenos</a></li>
+            </ul>
+        </div>
+    </header>
 </body>
 
 </html>
