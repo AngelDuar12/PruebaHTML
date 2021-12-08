@@ -1,4 +1,8 @@
 
+#contenedor
+{
+    position: relative;
+}
 
 #tablero
 {
@@ -8,9 +12,10 @@
 
 #caballo
 {
-    position: absolute;
+    position: relative;
     width: 40px;
-    top: 147px;
-    left: 53px;
+    top: 44px;
+    left: 148px;
     height: 40px;
+    float:left;
 }

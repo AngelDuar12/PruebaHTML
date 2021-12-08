@@ -9,22 +9,31 @@
 
 <body>
     <h1>Movimiento del Caballo</h1>
+    <script>
+        function MoverCaballo()
+        {
+            var nuevaPosicion=$('#txtPos').val();
+            caballo.Mover(nuevaPosicion);
+        }
+    </script>
 
     <table>
         <tr>
             <td>
-                <button id='cmdMove'>Mover</button>
+                <button id='cmdMove' onclick="MoverCaballo()">Mover</button>
                 <input id='txtPos' type='text' value='A2'>
             </td>
         </tr>
         <tr>
             <td>
-                <img id='tablero' src='ajedrez.png'>
+                <div id='container'>
+                    <img id='caballo' src='horse.svg'>
+                    <img id='tablero' src='ajedrez.png'>
+                </div>
+
             </td>
         </tr>
     </table>
-
-    <img id='caballo' src='horse.svg'>
 </body>
 
 </html>
