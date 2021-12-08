@@ -3,16 +3,28 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="perro.js" type="text/Javascript"></script>
+    <script src="caballo.js" type="text/Javascript"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1>Movimiento del Caballo</h1>
 
+    <table>
+        <tr>
+            <td>
+                <button id='cmdMove'>Mover</button>
+                <input id='txtPos' type='text' value='A2'>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id='tablero' src='ajedrez.png'>
+            </td>
+        </tr>
+    </table>
 
-    <img id='tablero' src='ajedrez.png'>
-
+    <img id='caballo' src='horse.svg'>
 </body>
 
 </html>

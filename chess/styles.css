@@ -5,3 +5,12 @@
     width: 600px;
     height: 600px;
 }
+
+#caballo
+{
+    position: absolute;
+    width: 40px;
+    top: 147px;
+    left: 53px;
+    height: 40px;
+}
