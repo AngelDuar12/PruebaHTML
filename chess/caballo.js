@@ -11,12 +11,11 @@ var caballo =
 
         var absisa = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
 
-        debugger;
         for (j = 1; j <= 8; j++) {
 
             for (i = 0; i < absisa.length; i++) {
                 var nombre = absisa[i] + j;
-                this.table.push({ name: nombre, left: 86 + i * 66, top: 44 });
+                this.table.push({ name: nombre, left: 86 + i * 66, top: 44 + (j - 1) * 66 });
             }
         }
 
