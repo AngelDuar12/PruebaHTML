@@ -13,8 +13,13 @@ var caballo =
     Mover: function (nuevaPosicion) {
 
         if (nuevaPosicion == 'C6') {
-            $('#caballo').css('left', '148px');
-            $('#caballo').css('top', '112px');
+            $('#caballo').css('left', '216px');
+            $('#caballo').css('top', '177px');
+        }
+
+        if (nuevaPosicion == 'D7') {
+            $('#caballo').css('left', '284px');
+            $('#caballo').css('top', '110px');
         }
 
         console.log('el caballo se ha movido a la posicion:' + nuevaPosicion);
