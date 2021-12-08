@@ -5,23 +5,27 @@ var caballo =
     // Atributos
     pos: 'A2',
 
-    Init: function () {
+    table: new Array(),
 
+    InicializarTablero: function () {
+
+        this.table.push({ name: 'D7', left: 284, top: 110 });
+        this.table.push({ name: 'C6', left: 216, top: 177 });
     },
 
     // Metodos
     Mover: function (nuevaPosicion) {
 
-        if (nuevaPosicion == 'C6') {
-            $('#caballo').css('left', '216px');
-            $('#caballo').css('top', '177px');
+        const found = this.table.find(element => element.name == nuevaPosicion);
+
+        if (found != undefined) {
+
+            $('#caballo').css('left', found.left + 'px');
+            $('#caballo').css('top', found.top + 'px');
+
+            console.log('el caballo se ha movido a la posicion:' + nuevaPosicion);
         }
 
-        if (nuevaPosicion == 'D7') {
-            $('#caballo').css('left', '284px');
-            $('#caballo').css('top', '110px');
-        }
 
-        console.log('el caballo se ha movido a la posicion:' + nuevaPosicion);
     }
 }
