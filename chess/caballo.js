@@ -9,15 +9,15 @@ var caballo =
 
     InicializarTablero: function () {
 
-        this.table.push({ name: 'D7', left: 284, top: 110 });
-        this.table.push({ name: 'C6', left: 216, top: 177 });
-
         var absisa = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
 
         debugger;
-        for (i = 0; i < absisa.length; i++) {
-            var nombre = absisa[i] +'1';
-            this.table.push({ name: nombre, left: 86 + i * 66, top: 44 });
+        for (j = 1; j <= 8; j++) {
+
+            for (i = 0; i < absisa.length; i++) {
+                var nombre = absisa[i] + j;
+                this.table.push({ name: nombre, left: 86 + i * 66, top: 44 });
+            }
         }
 
     },
