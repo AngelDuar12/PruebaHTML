@@ -8,9 +8,10 @@ var board = {
         // Mapea las posiciones del mapa con las
         var absisa = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
 
-        var margin = 20;
-        var width = $('#board').width();
-        var delta = width / 8 - 2 * margin;
+        var margin = 40;
+        var width = $('.container .board').width();
+        var delta = (width / 8);
+
 
         for (j = 8; j >= 1; j--) {
 
@@ -18,8 +19,8 @@ var board = {
                 var nombre = absisa[i] + j;
                 var celda = {
                     name: nombre,
-                    left: i * delta,
-                    top: (j - 1) * delta
+                    left: i * delta + margin,
+                    top: width - (j - 1) * delta - margin
                 };
 
                 this.table.push(celda);

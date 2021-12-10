@@ -3,24 +3,29 @@
     src: url('./fonts/CASEFONT.TTF') format("truetype");
 }
 
-#board {
-    width: 600px;
-    height: 600px;
-    z-index: 0;
+.container {
+    display: block;
+}
+
+.container .board {
     background-image: url('./ajedrez.png');
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Cases';
+    height: 600px;
+    padding: 37px;
     position: relative;
+    width: 600px;
+    z-index: 0;
 }
 
-.ficha {
+.container .board .ficha {
+    background-color: transparent;
     border: none;
     float: left;
-    font-family: 'Cases';
     font-size: 60px;
     height: auto;
     position: absolute;
     width: auto;
     z-index: 1000;
-    background-color: transparent;
 }
