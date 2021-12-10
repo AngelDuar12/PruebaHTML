@@ -19,6 +19,10 @@
     z-index: 0;
 }
 
+.container .board .blancas {
+    color: gray;
+}
+
 .container .board .ficha {
     background-color: transparent;
     border: none;
