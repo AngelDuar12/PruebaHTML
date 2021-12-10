@@ -1,35 +1,48 @@
 <html>
 
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="caballo.js" type="text/Javascript"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="chess.js" type="text/Javascript"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
 </head>
 
 <body>
     <h1>Movimiento del Caballo</h1>
     <script>
-        caballo.InicializarTablero();
-        
-        function MoverCaballo()
-        {
-            var nuevaPosicion=$('#txtPos').val();
-            caballo.Mover(nuevaPosicion);
+        board.Initialize();
+
+        function MoverFicha() {
+            var nuevaPosicion = $('#txtPos').val();
+            var ficha = $('#cmbFicha').val();
+            board.Move(ficha, nuevaPosicion);
         }
     </script>
 
     <table>
         <tr>
             <td>
-                <button id='cmdMove' onclick="MoverCaballo()">Mover</button>
+                <select id='cmbFicha'>
+                    <option value="torre">Torre</option>
+                    <option value="caballo">Caballo</option>
+                    <option value="alfil">Alfil</option>
+                    <option value="reina">Reina</option>
+                    <option value="rey">Rey</option>
+                    <option value="peon">peon</option>
+                </select>
+                <button id='cmdMove' onclick="MoverFicha()">Mover</button>
                 <input id='txtPos' type='text' value='A2'>
             </td>
         </tr>
         <tr>
             <td>
                 <div id='container'>
-                    <img id='caballo' src='horse.svg'>
+                    <i id='torre' class="ficha fas fa-chess-rook"></i>
+                    <i id='caballo' class="b8 ficha fas fa-chess-knight"></i>
+                    <i id='alfil' class="ficha fas fa-chess-bishop"></i>
+                    <i id='rey' class="ficha fas fa-chess-king"></i>
+                    <i id='reina' class="ficha fas fa-chess-queen"></i>
+                    <i id=peon class="ficha fas fa-chess-pawn"></i>
                     <img id='tablero' src='ajedrez.png'>
                 </div>
 

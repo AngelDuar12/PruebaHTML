@@ -1,21 +1,31 @@
+@font-face {
+    font-family: "Cases";
+    src: url(./fonts/CASEFONT.TTF) format("truetype");
+}
 
-#contenedor
-{
+#contenedor {
     position: relative;
 }
 
-#tablero
-{
+#tablero {
     width: 600px;
     height: 600px;
+    z-index: 0;
 }
 
-#caballo
-{
+.ficha {
+    border: none;
+    float: left;
+    font-family: 'Cases';
+    font-size: 60px;
+    height: auto;
     position: relative;
-    width: 40px;
-    top: 44px;
+    width: auto;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.b8 {
     left: 148px;
-    height: 40px;
-    float:left;
+    top: 44px;
 }
