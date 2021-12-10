@@ -5,22 +5,41 @@ var board = {
 
     Initialize: function() {
 
+        // Mapea las posiciones del mapa con las
         var absisa = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
 
-        for (j = 1; j <= 8; j++) {
+        var margin = 20;
+        var width = $('#board').width();
+        var delta = width / 8 - 2 * margin;
+
+        for (j = 8; j >= 1; j--) {
 
             for (i = 0; i < absisa.length; i++) {
                 var nombre = absisa[i] + j;
-                this.table.push({ name: nombre, left: 86 + i * 66, top: 44 + (j - 1) * 66 });
+                var celda = {
+                    name: nombre,
+                    left: i * delta,
+                    top: (j - 1) * delta
+                };
+
+                this.table.push(celda);
             }
         }
+
+        // Colocar las fichas en la posicion correcta
+        this.Move('torre', 'a8');
+        this.Move('caballo', 'b8');
+        this.Move('alfil', 'c8');
+        this.Move('reina', 'd8');
+        this.Move('rey', 'e8');
+        this.Move('peon', 'a7');
 
     },
 
     // Mover una ficha en el tablero
     Move: function(piece, position) {
 
-        const found = this.table.find(square => square.name == position);
+        const found = this.table.find(square => square.name.toLowerCase() == position.toLowerCase());
 
         if (found != undefined) {
 
@@ -31,3 +50,13 @@ var board = {
         }
     }
 }
+
+function Mover() {
+    var nuevaPosicion = $('#txtPos').val();
+    var ficha = $('#cmbFicha').val();
+    board.Move(ficha, nuevaPosicion);
+}
+
+$(document).ready(function(e) {
+    board.Initialize();
+});

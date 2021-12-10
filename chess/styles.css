@@ -10,6 +10,7 @@
     background-image: url('./ajedrez.png');
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .ficha {
@@ -18,7 +19,7 @@
     font-family: 'Cases';
     font-size: 60px;
     height: auto;
-    position: relative;
+    position: absolute;
     width: auto;
     z-index: 1000;
     background-color: transparent;
