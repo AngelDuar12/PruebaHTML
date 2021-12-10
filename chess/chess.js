@@ -96,9 +96,7 @@ var board = {
 
         if (found != undefined) {
 
-            $('#' + piece).css('left', found.left + 'px');
-            $('#' + piece).css('top', found.top + 'px');
-
+            $('#' + piece).animate({ left: found.left, top: found.top }, "slow");
             console.log(piece + ' se ha movido a la posicion:' + position);
         }
     }
