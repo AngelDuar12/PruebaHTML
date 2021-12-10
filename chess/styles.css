@@ -23,6 +23,10 @@
     color: gray;
 }
 
+.container .board .negras {
+    color: black;
+}
+
 .container .board .ficha {
     background-color: transparent;
     border: none;
