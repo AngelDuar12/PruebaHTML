@@ -104,7 +104,7 @@ var board = {
     }
 }
 
-function Mover() {
+function Mover_Click() {
     var nuevaPosicion = $('#txtPos').val();
     var ficha = $('#cmbFicha').val();
     board.Move(ficha, nuevaPosicion);
