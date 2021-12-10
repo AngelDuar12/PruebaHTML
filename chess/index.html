@@ -12,7 +12,7 @@
     <script>
         board.Initialize();
 
-        function MoverFicha() {
+        function Mover() {
             var nuevaPosicion = $('#txtPos').val();
             var ficha = $('#cmbFicha').val();
             board.Move(ficha, nuevaPosicion);
@@ -30,20 +30,19 @@
                     <option value="rey">Rey</option>
                     <option value="peon">peon</option>
                 </select>
-                <button id='cmdMove' onclick="MoverFicha()">Mover</button>
+                <button id='cmdMove' onclick="Mover()">Mover</button>
                 <input id='txtPos' type='text' value='A2'>
             </td>
         </tr>
         <tr>
             <td>
-                <div id='container'>
+                <div id='board'>
                     <i id='torre' class="ficha fas fa-chess-rook"></i>
-                    <i id='caballo' class="b8 ficha fas fa-chess-knight"></i>
+                    <i id='caballo' class="ficha fas fa-chess-knight"></i>
                     <i id='alfil' class="ficha fas fa-chess-bishop"></i>
                     <i id='rey' class="ficha fas fa-chess-king"></i>
                     <i id='reina' class="ficha fas fa-chess-queen"></i>
                     <i id=peon class="ficha fas fa-chess-pawn"></i>
-                    <img id='tablero' src='ajedrez.png'>
                 </div>
 
             </td>

@@ -1,16 +1,15 @@
 @font-face {
     font-family: "Cases";
-    src: url(./fonts/CASEFONT.TTF) format("truetype");
+    src: url('./fonts/CASEFONT.TTF') format("truetype");
 }
 
-#contenedor {
-    position: relative;
-}
-
-#tablero {
+#board {
     width: 600px;
     height: 600px;
     z-index: 0;
+    background-image: url('./ajedrez.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .ficha {
@@ -23,9 +22,4 @@
     width: auto;
     z-index: 1000;
     background-color: transparent;
-}
-
-.b8 {
-    left: 148px;
-    top: 44px;
 }
