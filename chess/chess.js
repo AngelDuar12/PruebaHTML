@@ -97,6 +97,13 @@ var board = {
         if (found != undefined) {
 
             $('#' + piece).animate({ left: found.left, top: found.top }, "slow");
+
+            var ficha = this.posicionesIniciales.find(x => x.name == piece);
+
+            if (ficha) {
+                ficha.posicion = position;
+            }
+
             console.log(piece + ' se ha movido a la posicion:' + position);
         }
     }
