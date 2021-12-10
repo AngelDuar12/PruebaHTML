@@ -74,6 +74,12 @@ var board = {
 
         this.Reset();
 
+
+        $.each(this.posicionesIniciales, function(index, value) {
+
+            $('select#cmbficha').append(new Option(value.ficha, value.ficha));
+        });
+
     },
 
     Reset: function() {
