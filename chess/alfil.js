@@ -8,7 +8,6 @@ var alfil = {
         var letra = values[0];
         var numero = parseInt(values[1]);
 
-        // b8 => a6 // Bajo una letra y salto dos casillas a la izq
         var destino1 = 'a' + (numero - 2);
         var destino2 = 'c' + (numero - 2);
         var destinos = [destino1, destino2];
@@ -16,16 +15,6 @@ var alfil = {
         $.each(destinos, function(index, pos) {
             board.Move(ficha, pos);
         }.bind(this));
-
-        // board.Move(ficha, 'c6');
-        // actual = this.MostrarPosicion(ficha);
-        // board.Move(ficha, 'a5');
-        // actual = this.MostrarPosicion(ficha);
-        // board.Move(ficha, 'b3');
-        // actual = this.MostrarPosicion(ficha);
-
-        // Cuales serian las posibles posiciones a las que se 
-        // puede mover un caballo
 
     },
 
