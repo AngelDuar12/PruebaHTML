@@ -9,7 +9,7 @@ var alfil = {
         var numero = parseInt(values[1]);
 
         var destino1 = 'a' + (numero - 2);
-        var destino2 = 'c' + (numero - 2);
+        var destino2 = 'b' + (numero - 1);
         var destinos = [destino1, destino2];
 
         $.each(destinos, function(index, pos) {
