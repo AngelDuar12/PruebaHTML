@@ -3,8 +3,8 @@ requirejs.config({
     paths: {
 
         jquery: 'jquery/dist/jquery.min',
-        chess: 'chess',
-        app: 'app'
+        chess: '../chess/chess',
+        app: '../chess/app'
     },
     shim: {
         'app': ['jquery', 'chess'],
