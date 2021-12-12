@@ -11,7 +11,7 @@ var board = {
         'blancas-peon-1'
     ],
 
-    posicionesIniciales: [
+    posiciones: [
         { ficha: 'blancas-torre-izq', posicion: 'a8' },
         { ficha: 'blancas-caballo-izq', posicion: 'b8' },
         { ficha: 'blancas-alfil-izq', posicion: 'c8' },
@@ -75,7 +75,7 @@ var board = {
         this.Reset();
 
 
-        $.each(this.posicionesIniciales, function(index, value) {
+        $.each(this.posiciones, function(index, value) {
 
             $('select#cmbficha').append(new Option(value.ficha, value.ficha));
         });
@@ -84,7 +84,7 @@ var board = {
 
     Reset: function() {
 
-        $.each(this.posicionesIniciales, function(index, value) {
+        $.each(this.posiciones, function(index, value) {
             this.Move(value.ficha, value.posicion);
         }.bind(this));
     },
@@ -98,7 +98,7 @@ var board = {
 
             $('#' + piece).animate({ left: found.left, top: found.top }, "slow");
 
-            var ficha = this.posicionesIniciales.find(x => x.name == piece);
+            var ficha = this.posiciones.find(x => x.name == piece);
 
             if (ficha) {
                 ficha.posicion = position;

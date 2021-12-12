@@ -12,7 +12,7 @@ var alfil = {
         var destino2 = 'a' + (numero - 2);
         var destino3 = 'b' + (numero - 3);
         var destino4 = 'c' + (numero - 4);
-        var destino5 = 'd' + (numero - 5); 
+        var destino5 = 'd' + (numero - 5);
         var destinos = [destino1, destino2, destino3, destino4, destino5];
 
         $.each(destinos, function(index, pos) {
@@ -22,7 +22,7 @@ var alfil = {
     },
 
     MostrarPosicion: function(ficha) {
-        var posicion = board.posicionesIniciales.find(x => x.ficha == ficha);
+        var posicion = board.posiciones.find(x => x.ficha == ficha);
 
         if (posicion) {
 

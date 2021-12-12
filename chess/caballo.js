@@ -31,7 +31,7 @@ var caballo = {
     },
 
     MostrarPosicion: function(ficha) {
-        var posicion = board.posicionesIniciales.find(x => x.ficha == ficha);
+        var posicion = board.posiciones.find(x => x.ficha == ficha);
 
         if (posicion) {
 
