@@ -101,11 +101,15 @@ var board = {
 
         if (found && ficha && !estaOcupada) {
 
-            $('#' + piece).animate({ left: found.left, top: found.top }, "slow");
+            if ($('#' + piece).Exists()) {
+                $('#' + piece).animate({ left: found.left, top: found.top }, "slow");
 
-            ficha.posicion = position;
+                ficha.posicion = position;
 
-            console.log(`${piece} se ha movido a la posicion:, ${position}`);
+                console.log(`${piece} se ha movido a la posicion:, ${position}`);
+            } else {
+                console.log(`La ficha ${ficha.ficha} no existe en el tablero`);
+            }
         } else {
             console.log(`${ficha}:La posicion, ${position}, esta ocupada`);
         }
@@ -120,7 +124,7 @@ function Mover_Click() {
     board.Move(ficha, nuevaPosicion);
 }
 
-$(document).ready(function(e) {
+$(window).on("load", function() {
     board.Initialize();
     board.Reset();
 });
