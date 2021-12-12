@@ -70,20 +70,40 @@ var chess = {
         });
 
         $(".ficha").draggable({
-            start: function() {
+            opacity: 0.35,
+            start: function(e) {
 
                 console.log('inicio de drag');
             },
-            drag: function() {
+            drag: function(e) {
                 console.log('moviendo');
             },
-            stop: function() {
+            stop: function(e) {
+
+                debugger;
+
+                var ficha = e.target.id;
+
+                // Intentar detectar left y top a partir el valor de entrada e
+                // o con fichaId
+
+                var left = 121;
+                var top = 200;
+
+                var finded = this.BuscarCelda(left, top)
+                finded.posicion = finded;
+                this.Move(ficha, finded.name);
 
                 console.log('fin de drag');
 
-            }
+            }.bind(this)
         });
 
+    },
+
+    BuscarCelda: function(left, top) {
+        // Detectar en cual cuadrado cae la coordenada
+        return this.table.find(x => x.left <= left && x.top <= top);
     },
 
     Reset: function() {
