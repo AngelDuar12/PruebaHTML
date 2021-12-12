@@ -69,6 +69,21 @@ var chess = {
             $('select#cmbficha').append(new Option(value.ficha, value.ficha));
         });
 
+        $(".ficha").draggable({
+            start: function() {
+
+                console.log('inicio de drag');
+            },
+            drag: function() {
+                console.log('moviendo');
+            },
+            stop: function() {
+
+                console.log('fin de drag');
+
+            }
+        });
+
     },
 
     Reset: function() {
