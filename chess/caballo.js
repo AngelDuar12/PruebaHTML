@@ -14,15 +14,15 @@ var caballo = {
         var destinos = [destino1, destino2];
 
         $.each(destinos, function(index, pos) {
-            board.Move(ficha, pos);
+            chess.Move(ficha, pos);
         }.bind(this));
 
 
-        // board.Move(ficha, 'c6');
+        // chess.Move(ficha, 'c6');
         // actual = this.MostrarPosicion(ficha);
-        // board.Move(ficha, 'a5');
+        // chess.Move(ficha, 'a5');
         // actual = this.MostrarPosicion(ficha);
-        // board.Move(ficha, 'b3');
+        // chess.Move(ficha, 'b3');
         // actual = this.MostrarPosicion(ficha);
 
         // Cuales serian las posibles posiciones a las que se 
@@ -31,7 +31,7 @@ var caballo = {
     },
 
     MostrarPosicion: function(ficha) {
-        var posicion = board.posiciones.find(x => x.ficha == ficha);
+        var posicion = chess.posiciones.find(x => x.ficha == ficha);
 
         if (posicion) {
 

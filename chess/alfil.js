@@ -16,13 +16,13 @@ var alfil = {
         var destinos = [destino1, destino2, destino3, destino4, destino5];
 
         $.each(destinos, function(index, pos) {
-            board.Move(ficha, pos);
+            chess.Move(ficha, pos);
         }.bind(this));
 
     },
 
     MostrarPosicion: function(ficha) {
-        var posicion = board.posiciones.find(x => x.ficha == ficha);
+        var posicion = chess.posiciones.find(x => x.ficha == ficha);
 
         if (posicion) {
 
