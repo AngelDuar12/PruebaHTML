@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="../node_modules/jquery-ui-dist/jquery-ui.min.css" />
+    <script src="../node_modules/requirejs/require.js" type="text/Javascript"></script>
+    <script src="config.js" type="text/Javascript"></script>
+</head>
+
+<body>
+
+    <h1>Ajedrez Clasico</h1>
+    <table>
+        <tr>
+            <td>
+                <select id='cmbFicha'>
+                 
+                </select>
+                <button id='cmdMove' onclick="Mover_Click()">Mover Ficha</button>
+                <input id='txtPos' type='text' value='d4'>
+            </td>
+            <td>
+                <button id='cmdMoveHorse' onclick="Mover_Caballo()">Mover Caballito</button>
+            </td>
+
+            <td>
+                <button id='cmdMoveBishop' onclick="Mover_Alfil()">Mover Alfil</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="container">
+                    <div class='board'>
+                        <i id='blancas-torre-izq' class="blancas ficha fas fa-chess-rook"></i>
+                        <i id='blancas-caballo-izq' class="blancas ficha fas fa-chess-knight"></i>
+                        <i id='blancas-alfil-izq' class="blancas ficha fas fa-chess-bishop"></i>
+                        <i id='blancas-rey' class="blancas ficha fas fa-chess-king"></i>
+                        <i id='blancas-reina' class="blancas ficha fas fa-chess-queen"></i>
+                        <i id='blancas-alfil-der' class="blancas ficha fas fa-chess-bishop"></i>
+                        <i id='blancas-caballo-der' class="blancas ficha fas fa-chess-knight"></i>
+                        <i id='blancas-torre-der' class="blancas ficha fas fa-chess-rook"></i>
+                        <i id='blancas-peon-1' class="blancas ficha fas fa-chess-pawn"></i>
+                        <i id='blancas-peon-2' class="blancas ficha fas fa-chess-pawn"></i>
+                        <i id='blancas-peon-3' class="blancas ficha fas fa-chess-pawn"></i>
+                        <i id='blancas-peon-4' class="blancas ficha fas fa-chess-pawn"></i>
+                        <i id='blancas-peon-5' class="blancas ficha fas fa-chess-pawn"></i>
+                        <i id='blancas-peon-6' class="blancas ficha fas fa-chess-pawn"></i>
+                        <i id='blancas-peon-7' class="blancas ficha fas fa-chess-pawn"></i>
+                        <i id='blancas-peon-8' class="blancas ficha fas fa-chess-pawn"></i>
+
+                        <i id='negras-torre-izq' class="negras ficha fas fa-chess-rook"></i>
+                        <i id='negras-caballo-izq' class="negras ficha fas fa-chess-knight"></i>
+                        <i id='negras-alfil-izq' class="negras ficha fas fa-chess-bishop"></i>
+                        <i id='negras-rey' class="negras ficha fas fa-chess-king"></i>
+                        <i id='negras-reina' class="negras ficha fas fa-chess-queen"></i>
+                        <i id='negras-alfil-der' class="negras ficha fas fa-chess-bishop"></i>
+                        <i id='negras-caballo-der' class="negras ficha fas fa-chess-knight"></i>
+                        <i id='negras-torre-der' class="negras ficha fas fa-chess-rook"></i>
+                        <i id='negras-peon-1' class="negras ficha fas fa-chess-pawn"></i>
+                        <i id='negras-peon-2' class="negras ficha fas fa-chess-pawn"></i>
+                        <i id='negras-peon-3' class="negras ficha fas fa-chess-pawn"></i>
+                        <i id='negras-peon-4' class="negras ficha fas fa-chess-pawn"></i>
+                        <i id='negras-peon-5' class="negras ficha fas fa-chess-pawn"></i>
+                        <i id='negras-peon-6' class="negras ficha fas fa-chess-pawn"></i>
+                        <i id='negras-peon-7' class="negras ficha fas fa-chess-pawn"></i>
+                        <i id='negras-peon-8' class="negras ficha fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

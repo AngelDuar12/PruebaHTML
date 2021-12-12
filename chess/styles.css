@@ -1,0 +1,31 @@
+.container {
+    display: block;
+    z-index: 0;
+}
+
+.container .board {
+    background-image: url('./ajedrez.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    padding: 37px;
+    position: relative;
+    width: 600px;
+    z-index: 1;
+}
+
+.container .board .blancas {
+    color: gray;
+}
+
+.container .board .negras {
+    color: black;
+}
+
+.container .board .ficha {
+    /* background-color: transparent; */
+    border: none;
+    font-size: 60px;
+    position: absolute;
+    z-index: 10;
+}
