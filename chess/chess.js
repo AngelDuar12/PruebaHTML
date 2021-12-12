@@ -1,11 +1,3 @@
-// // Funcion tipo extension que devuelve si el valor tiene un valor o no
-// Object.prototype.Exists = function(value) {
-
-//     // Evalua si value es null, cero (en caso de ser numero) o indefinida
-//     if (value) return true
-//     else return false;
-// };
-
 var chess = {
 
     table: new Array(),
