@@ -1,10 +1,6 @@
-@font-face {
-    font-family: "Cases";
-    src: url('./fonts/CASEFONT.TTF') format("truetype");
-}
-
 .container {
     display: block;
+    z-index: 0;
 }
 
 .container .board {
@@ -16,7 +12,7 @@
     padding: 37px;
     position: relative;
     width: 600px;
-    z-index: 0;
+    z-index: 1;
 }
 
 .container .board .blancas {
@@ -35,5 +31,5 @@
     height: auto;
     position: absolute;
     width: auto;
-    z-index: 1000;
+    z-index: 10;
 }

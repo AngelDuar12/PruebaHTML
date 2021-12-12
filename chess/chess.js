@@ -2,14 +2,6 @@
 var board = {
 
     table: new Array(),
-    piezas: [
-        'blancas-torre-izq',
-        'blancas-caballo-izq',
-        'blancas-alfil-izq',
-        'blancas-reina',
-        'blancas-rey',
-        'blancas-peon-1'
-    ],
 
     posiciones: [
         { ficha: 'blancas-torre-izq', posicion: 'a8' },
@@ -72,8 +64,6 @@ var board = {
             }
         }
 
-        this.Reset();
-
 
         $.each(this.posiciones, function(index, value) {
 
@@ -92,22 +82,37 @@ var board = {
     // Mover una ficha en el tablero
     Move: function(piece, position) {
 
-        const found = this.table.find(square => square.name.toLowerCase() == position.toLowerCase());
+        // buscar la posicion acorde con la nomenclatura del ajedrez
+        var found = this.table.find(square => square.name.toLowerCase() == position.toLowerCase());
 
-        if (found != undefined) {
+        // Buscar la ficha en el tablero
+        var ficha = this.posiciones.find(x => x.ficha == piece);
+
+        // Buscar si hay otra ficha ocupando esta casilla 
+        var estaOcupada = this.posiciones.find(x => x.posicion == position).Exists();
+
+        if (found && ficha && !estaOcupada) {
 
             $('#' + piece).animate({ left: found.left, top: found.top }, "slow");
 
-            var ficha = this.posiciones.find(x => x.name == piece);
+            ficha.posicion = position;
 
-            if (ficha) {
-                ficha.posicion = position;
-            }
-
-            console.log(piece + ' se ha movido a la posicion:' + position);
+            console.log(`${piece} se ha movido a la posicion:, ${position}`);
+        } else {
+            console.log(`${ficha}:La posicion, ${position}, esta ocupada`);
         }
     }
+
 }
+
+
+// Funcion tipo extension que devuelve si el valor tiene un valor o no
+Object.prototype.Exists = function Exists(value) {
+
+    // Evalua si value es null, cero (en caso de ser numero) o indefinida
+    if (value) return true
+    else return false;
+};
 
 function Mover_Click() {
     var nuevaPosicion = $('#txtPos').val();
@@ -117,4 +122,5 @@ function Mover_Click() {
 
 $(document).ready(function(e) {
     board.Initialize();
+    board.Reset();
 });
