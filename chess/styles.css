@@ -23,12 +23,9 @@
 }
 
 .container .board .ficha {
-    background-color: transparent;
+    /* background-color: transparent; */
     border: none;
-    float: left;
     font-size: 60px;
-    height: auto;
     position: absolute;
-    width: auto;
     z-index: 10;
 }
