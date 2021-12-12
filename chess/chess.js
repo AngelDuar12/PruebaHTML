@@ -1,3 +1,11 @@
+// Funcion tipo extension que devuelve si el valor tiene un valor o no
+Object.prototype.Exists = function(value) {
+
+    // Evalua si value es null, cero (en caso de ser numero) o indefinida
+    if (value) return true
+    else return false;
+};
+
 // Json
 var board = {
 
@@ -105,14 +113,6 @@ var board = {
 
 }
 
-
-// Funcion tipo extension que devuelve si el valor tiene un valor o no
-Object.prototype.Exists = function Exists(value) {
-
-    // Evalua si value es null, cero (en caso de ser numero) o indefinida
-    if (value) return true
-    else return false;
-};
 
 function Mover_Click() {
     var nuevaPosicion = $('#txtPos').val();
