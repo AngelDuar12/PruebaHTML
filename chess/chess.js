@@ -84,10 +84,10 @@ var chess = {
                 var ficha = e.target.id;
 
                 // Intentar detectar left y top a partir el valor de entrada e
-                // o con fichaId
+                // o con fichaId                
 
-                var left = 400;
-                var top = 400;
+                var left = parseInt(e.target.style.left);
+                var top = parseInt(e.target.style.top);
 
                 var finded = this.BuscarCelda(left, top)
                 finded.posicion = finded;
@@ -102,12 +102,12 @@ var chess = {
 
     BuscarCelda: function(left, top) {
 
-        debugger;
+
         // Detectar en cual cuadrado cae la coordenada
         var width = $('.container .board').width();
         var delta = (width / 8);
         var posX = parseInt(left / delta);
-        var posY = parseInt(top / delta);
+        var posY = 8 - parseInt(top / delta);
 
         var letra = this.absisa[posX];
 
