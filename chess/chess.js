@@ -80,7 +80,6 @@ var chess = {
             },
             stop: function(e) {
 
-                debugger;
 
                 var ficha = e.target.id;
 
