@@ -1,6 +1,7 @@
 var chess = {
 
     table: new Array(),
+    absisa: new Array(),
 
     posiciones: [
         { ficha: 'blancas-torre-izq', posicion: 'a8' },
@@ -42,7 +43,7 @@ var chess = {
     Initialize: function() {
 
         // Mapea las posiciones del mapa con las
-        var absisa = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
+        this.absisa = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
 
         var margin = 40;
         var width = $('.container .board').width();
@@ -51,8 +52,8 @@ var chess = {
 
         for (j = 8; j >= 1; j--) {
 
-            for (i = 0; i < absisa.length; i++) {
-                var nombre = absisa[i] + j;
+            for (i = 0; i < this.absisa.length; i++) {
+                var nombre = this.absisa[i] + j;
                 var celda = {
                     name: nombre,
                     left: i * delta + margin + adjustInCenter,
@@ -80,15 +81,13 @@ var chess = {
             },
             stop: function(e) {
 
-                debugger;
-
                 var ficha = e.target.id;
 
                 // Intentar detectar left y top a partir el valor de entrada e
                 // o con fichaId
 
-                var left = 121;
-                var top = 200;
+                var left = 400;
+                var top = 400;
 
                 var finded = this.BuscarCelda(left, top)
                 finded.posicion = finded;
@@ -102,8 +101,17 @@ var chess = {
     },
 
     BuscarCelda: function(left, top) {
+
+        debugger;
         // Detectar en cual cuadrado cae la coordenada
-        return this.table.find(x => x.left <= left && x.top <= top);
+        var width = $('.container .board').width();
+        var delta = (width / 8);
+        var posX = parseInt(left / delta);
+        var posY = parseInt(top / delta);
+
+        var letra = this.absisa[posX];
+
+        return { name: letra + posY };
     },
 
     Reset: function() {
