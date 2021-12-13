@@ -72,13 +72,6 @@ var chess = {
 
         $(".ficha").draggable({
             opacity: 0.35,
-            start: function(e) {
-
-                console.log('inicio de drag');
-            },
-            drag: function(e) {
-                console.log('moviendo');
-            },
             stop: function(e) {
 
                 var ficha = e.target.id;
