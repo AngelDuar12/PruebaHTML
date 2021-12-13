@@ -74,6 +74,10 @@ var chess = {
             opacity: 0.35,
             stop: function(e) {
 
+<<<<<<< HEAD:chess/chess.js
+=======
+
+>>>>>>> a74a35772a5c192ad8d6798a32af37332871c607:chess/Scripts/chess.js
                 var ficha = e.target.id;
 
                 // Intentar detectar left y top a partir el valor de entrada e
