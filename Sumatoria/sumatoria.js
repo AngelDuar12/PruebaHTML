@@ -12,3 +12,5 @@ var diez = 10;
 var resultado = uno + dos + tres + cuatro + cinco + seis + siete + ocho + nueve + diez;
 var parrafo = document.getElementById('valor');
 parrafo.innerText = resultado;
+
+// Flujo de control de un programa
