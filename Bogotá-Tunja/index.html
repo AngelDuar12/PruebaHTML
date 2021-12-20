@@ -5,24 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="tiempo.js"></script>
     <title>Tiempo entre Bogotá y Tunja</title>
 </head>
 
 <body>
-    <form action="">
-        <label for="espacio"></label>
-        <span>Espacio</span>
-        <input type="number" id "x" required />
-        </label>
-        <label for="velocidad"></label>
-        <span>Velocidad</span>
-        <input type="number" id "v" required>
-        </label>
-    </form>
+    <label for="espacio"></label>
+    <span>Espacio</span>
+    <input type="number" id="x" required value="140" />
+    </label>
+    <label for="velocidad"></label>
+    <span>Velocidad</span>
+    <input type="number" id="v" required value="60">
+    </label>
+    <button id='cmdCalcular' onclick="Ejecutar()">Ejecutar</button>
     <label for="">Resultado</label>
     <p id="resultado"></p>
-
+    <script src="tiempo.js"></script>
 </body>
 
 </html>

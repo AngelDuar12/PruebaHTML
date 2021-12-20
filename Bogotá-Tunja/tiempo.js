@@ -1,15 +1,13 @@
-var espacio = null;
-var velocidad = null;
+function Ejecutar() {
 
-function add(value) {
-    if (espacio == null) espacio = value;
-    else
-        if (velocidad == null) velocidad = value;
-    var p = document.getElementById("resultado");
-    if (espacio != null && velocidad != null) {
-        var resultado = espacio / velocidad;
-        p.innerText = resultado;
-        espacio = null;
-        velocidad = null;
-    }
+    var X = document.getElementById("x").value;
+    var v = document.getElementById("v").value;
+
+    var t = X / v;
+    var numericT = parseFloat(t);
+
+    var minutos = numericT - parseInt(t);
+    var datoMinutos = parseInt(minutos * 60);
+    document.getElementById("resultado").innerText = parseInt(t) + ' hora(s) y ' + datoMinutos + ' minutos';
+
 }
