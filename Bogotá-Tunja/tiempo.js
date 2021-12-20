@@ -1,16 +1,15 @@
-var distancia = null;
+var espacio = null;
 var velocidad = null;
 
-
 function add(value) {
-    if (distancia == null) espacio = value;
+    if (espacio == null) espacio = value;
     else
-        if (distancia == null) velocidad = value;
+        if (velocidad == null) velocidad = value;
     var p = document.getElementById("resultado");
     if (espacio != null && velocidad != null) {
-        var resultado = distancia / velocidad;
+        var resultado = espacio / velocidad;
         p.innerText = resultado;
-        distancia = null;
+        espacio = null;
         velocidad = null;
     }
 }
